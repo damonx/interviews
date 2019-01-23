@@ -24,6 +24,10 @@ public class OrganisationClient {
 //        4   |   John   |         2
 //        5   |   Sarah  |         1
 
+	/**
+	 * Stub method given by the assignment.
+	 *
+	 */
 	public static void displayManagementTree​() {
 
 		final List<Employee> employeeTable = new ArrayList<>();
@@ -41,12 +45,20 @@ public class OrganisationClient {
 		});
 		System.out.println("Here is the management tree:");
 		System.out.println("============================");
-
 		printEmployeeList(company, employeeTable.get(0));
 
 		System.out.println("============================");
 	}
 
+	/**
+	 * Recursively prints out the employ list, making sure: 1. The tree must start from the root manager. The root manager will have a
+	 * manager ID equal to 0. There is only 1 root manager. 2. The root manager must have 1 set of indentation characters, ‘->’. For
+	 * example, ->Tom 3. If an employee has a manager, then they must be displayed below their manager. 4. For every level management, they
+	 * must be another set of indentation characters, ‘->’.
+	 *
+	 * @param company
+	 * @param employee
+	 */
 	public static void printEmployeeList(final Company company, final Employee employee) {
 		employee.print();
 		final List<Employee> subEmployees = company.findSubEmployeesById(employee.getId());

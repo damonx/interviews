@@ -1,5 +1,10 @@
 package com.damonx.kiwiplan.interview;
 
+/**
+ * Self-explainable class
+ * 
+ * @author damonx
+ */
 public class Employee extends AbstractEmployee {
 	private final int Id;
 	private final String name;

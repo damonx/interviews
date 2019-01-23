@@ -19,7 +19,9 @@ public abstract class AbstractEmployee {
 
 	public abstract void print();
 
-	// prints arrows recursively.
+	/**
+	 * Prints arrows recursively.
+	 */
 	protected void printArrow() {
 		System.out.print("->");
 		if (!Objects.isNull(this.immediateManager)) {
