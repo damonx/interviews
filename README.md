@@ -13,12 +13,8 @@ Please refer to prereqisites to download relevant tools.
 
 ### Installing
 ```
-git clone https://github.com/damonx/interviews.git
-```
-```
-cd kiwiplan-interview/
-```
-```
+git clone https://github.com/damonx/interviews.git &&
+cd kiwiplan-interview/ &&
 mvn clean install
 ```
 ## Run & test
