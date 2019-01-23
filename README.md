@@ -12,10 +12,15 @@ Please refer to prereqisites to download relevant tools.
 2. Maven3
 
 ### Installing
-1. git clone https://github.com/damonx/interviews.git
-2. cd kiwiplan-interview/
-3. mvn clean install
-
+```
+git clone https://github.com/damonx/interviews.git
+```
+```
+cd kiwiplan-interview/
+```
+```
+mvn clean install
+```
 ## Run & test
 In kiwiplan-interview/ directory.
 Approach 1, issue the following command in your terminal. You'll see the result.
