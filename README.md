@@ -8,8 +8,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-JDK8
-Maven3
+1. JDK8
+2. Maven3
 
 ### Installing
 1. git clone https://github.com/damonx/interviews.git
