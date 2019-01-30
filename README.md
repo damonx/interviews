@@ -19,18 +19,19 @@ mvn clean install
 ```
 ## Run & test
 In kiwiplan-interview/ directory.
-Approach 1, issue the following command in your terminal. You'll see the result.
+
+1. Approach 1, issue the following command in your terminal. You'll see the result.
 
 ```
 mvn -U clean install
 ```
 
-Approach 2, via executable jar file.
+2. Approach 2, via executable jar file.
 
 ```
 mvn -U clean package && cd ./target && java -jar kiwiplan-interview-1.0-SNAPSHOT.jar
 ```
-
+3. Approach 3, import the project as a existing maven project into Eclipse, and run the main class ```OrganisationClient```
 ## Built With
 * [Maven](https://maven.apache.org/) - Dependency Management
 
