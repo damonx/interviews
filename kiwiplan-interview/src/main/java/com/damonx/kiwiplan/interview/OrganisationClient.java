@@ -63,8 +63,7 @@ public class OrganisationClient {
 	 */
 	public static void printEmployeeList(final Company company, final Employee employee) {
 		employee.print();
-		final List<Employee> subEmployees = company.findSubEmployeesById(employee.getId());
-		subEmployees.stream().forEach(e -> printEmployeeList(company, e));
+		company.findSubEmployeesById(employee.getId()).stream().forEach(e -> printEmployeeList(company, e));
 	}
 
 }
