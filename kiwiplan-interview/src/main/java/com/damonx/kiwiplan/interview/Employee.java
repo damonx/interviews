@@ -45,13 +45,7 @@ public class Employee extends AbstractEmployee {
 
 	@Override
 	public void print() {
-		Employee tempEmployee = this.immediateManager;
-		System.out.print("->");
-		while (tempEmployee != null) {
-			System.out.print("->");
-			tempEmployee = tempEmployee.immediateManager;
-
-		}
+		printArrow();
 		System.out.println(getName());
 	}
 

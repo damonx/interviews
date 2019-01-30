@@ -49,8 +49,6 @@ public class OrganisationClient {
 		printEmployeeList(company,
 				employeeTable.stream().sorted((e1, e2) -> e1.getManagerId().compareTo(e2.getManagerId())).findFirst().get());
 
-		// employeeTable.stream().forEach(e -> printEmployeeList2(e));
-
 		System.out.println("============================");
 	}
 
@@ -67,15 +65,6 @@ public class OrganisationClient {
 		employee.print();
 		final List<Employee> subEmployees = company.findSubEmployeesById(employee.getId());
 		subEmployees.stream().forEach(e -> printEmployeeList(company, e));
-	}
-
-	public static void printEmployeeList2(final Employee employee) {
-		if (employee.getManagerId() == 0) {
-			employee.print();
-		} else {
-			printEmployeeList2(employee.immediateManager);
-		}
-
 	}
 
 }
