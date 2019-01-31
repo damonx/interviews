@@ -18,7 +18,7 @@ cd kiwiplan-interview/ &&
 mvn clean install
 ```
 ## Run & test
-In kiwiplan-interview/ directory.
+In company-interview/ directory.
 
 1. Approach 1, issue the following command in your terminal. You'll see the result.
 
