@@ -1,4 +1,4 @@
-package com.damonx.kiwiplan.interview;
+package com.damonx.company.interview;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

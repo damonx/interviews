@@ -1,4 +1,4 @@
-package com.damonx.kiwiplan.interview;
+package com.damonx.company.interview;
 
 /**
  * Self-explainable class
