@@ -20,7 +20,7 @@ public class OrganisationClient {
 //	     Id   |   Name   |  Manager Id
 //        1   |   Tom    |         0
 //        2   |   Mickey |         1
-//        3   |   Jerry  |         1
+//        3   |   Jerry  |         2
 //        4   |   John   |         2
 //        5   |   Sarah  |         1
 
@@ -37,15 +37,17 @@ public class OrganisationClient {
 		});
 		final Company company = new Company(employeeTable);
 		index.set(0);
-		Stream.of(0, 1, 1, 2, 1).forEach(managerId -> {
+		Stream.of(2, 3, 0, 2, 1).forEach(managerId -> {
 			final int idx = index.getAndIncrement();
 			final Employee employee = employeeTable.get(idx);
 			employee.setManagerId(managerId);
 			employee.addManager(company.findEmployeById(managerId));
 		});
+
 		System.out.println("Here is the management tree:");
 		System.out.println("============================");
-		printEmployeeList(company, employeeTable.get(0));
+		printEmployeeList(company,
+				employeeTable.stream().sorted((e1, e2) -> e1.getManagerId().compareTo(e2.getManagerId())).findFirst().get());
 
 		System.out.println("============================");
 	}
@@ -61,8 +63,7 @@ public class OrganisationClient {
 	 */
 	public static void printEmployeeList(final Company company, final Employee employee) {
 		employee.print();
-		final List<Employee> subEmployees = company.findSubEmployeesById(employee.getId());
-		subEmployees.stream().forEach(e -> printEmployeeList(company, e));
+		company.findSubEmployeesById(employee.getId()).stream().forEach(e -> printEmployeeList(company, e));
 	}
 
 }
